@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 module.exports = {
     buyer: {
       type: mongoose.Schema.Types.ObjectId,
