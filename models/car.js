@@ -1,10 +1,7 @@
 const mongoose = require('mongoose');
-const Brand = require('./brand');
+const carValidations = require('../validations/car');
 
-const carSchema = new mongoose.Schema({
-  model: { type: String, required: true },
-  brand: { type: mongoose.Schema.Types.ObjectId, ref: 'Brand', required: true }
-});
+const carSchema = new mongoose.Schema(carValidations);
 
 const Car = mongoose.model('Car', carSchema);
 module.exports = Car;
